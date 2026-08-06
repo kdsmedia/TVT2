@@ -12,7 +12,8 @@ Uma Launcher leve, rápida e totalmente focada em usabilidade para Android TV e 
 - **Proteção Anti-Crash:** Botões de Wi-Fi e Bluetooth inteligentes que se adaptam a diferentes marcas de TV Box sem fechar o app.
 
 ## 🖼️ Telas do Aplicativo
-*
+<img width="1280" height="720" alt="Screenshot_20260806-135036" src="https://github.com/user-attachments/assets/536947d3-da68-4b6c-93cf-2c77841abeff" />
+<img width="1280" height="720" alt="Screenshot_20260806-135045" src="https://github.com/user-attachments/assets/70183053-437f-457e-acad-9d93ce12124e" />
 
 ## 📥 Como Baixar e Instalar na sua TV Box
 
@@ -30,4 +31,4 @@ Você não precisa entender de código para usar! Siga os passos:
 - **ConstraintLayout & GridView (otimizados para D-Pad)**
 
 ## 👨‍💻 Contribuições
-...
+Em breve novas versões...
