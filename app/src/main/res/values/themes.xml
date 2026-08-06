@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema Base da Launcher -->
+    <style name="Theme.UniTVLauncher" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Define o fundo geral do aplicativo como Preto Absoluto -->
+        <item name="android:windowBackground">@color/black_absolute</item>
+
+        <!-- Esconde barras de sistema caso apareçam -->
+        <item name="android:statusBarColor">@color/black_absolute</item>
+        <item name="android:navigationBarColor">@color/black_absolute</item>
+    </style>
+</resources>

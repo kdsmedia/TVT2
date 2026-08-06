@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Camada de trás: O Gradiente colorido simulando o logo UniTV -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:endColor="@color/unitv_blue"
+                android:centerColor="@color/unitv_purple"
+                android:startColor="@color/unitv_red"
+                android:type="linear" />
+            <corners android:radius="18dp" />
+        </shape>
+    </item>
+    <!-- Camada da frente: O preenchimento interno preto fosco -->
+    <!-- Os 3dp de margem criam a espessura da nossa "borda brilhante" -->
+    <item
+        android:bottom="3dp"
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/matte_black" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_wallpaper"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Fundo Escuro para Contraste -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000" />
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- ================= TELA 1: HOME (TOPO) ================= -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="1080dp"
+                android:focusable="false"
+                android:descendantFocusability="afterDescendants"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <!-- Canto Superior Esquerdo -->
+                <TextClock
+                    android:id="@+id/clockText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="36dp"
+                    android:format12Hour="HH:mm"
+                    android:format24Hour="HH:mm"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/redDivider"
+                    android:layout_width="2dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/unitv_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/clockText"
+                    app:layout_constraintStart_toEndOf="@+id/clockText"
+                    app:layout_constraintTop_toTopOf="@+id/clockText" />
+
+                <TextClock
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:format12Hour="EEEE\ndd 'de' MMMM 'de' yyyy"
+                    android:format24Hour="EEEE\ndd 'de' MMMM 'de' yyyy"
+                    android:textColor="#B0BEC5"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/clockText"
+                    app:layout_constraintStart_toEndOf="@+id/redDivider"
+                    app:layout_constraintTop_toTopOf="@+id/clockText" />
+
+                <!-- Logo UniTV MAIOR e MAIS PRÓXIMA DO TOPO (12dp de margem) -->
+
+                <!-- Ícones de Conexão -->
+                <ImageView
+                    android:id="@+id/logoUniTV"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="-30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_unitv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.499"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/statusIconsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/btnWifi"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_wifi"
+                            app:tint="@android:color/white" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/btnBluetooth"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_bluetooth"
+                            app:tint="@android:color/white" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/btnCast"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_cast"
+                            app:tint="@android:color/white" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Banner Customizável (Margem superior ajustada para compensar a logo) -->
+                <FrameLayout
+                    android:id="@+id/cardBanner"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginEnd="120dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/bg_card_selector"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logoUniTV">
+
+                    <ImageView
+                        android:id="@+id/imgBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/banner_padrao" />
+                </FrameLayout>
+
+                <!-- Centro: 5 Cards Principais -->
+                <LinearLayout
+                    android:id="@+id/cardsContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="48dp"
+                    android:orientation="horizontal"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardBanner">
+
+                    <!-- Card 1 -->
+                    <FrameLayout
+                        android:id="@+id/cardApp1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/cardApp1"
+                        android:nextFocusRight="@+id/cardApp2">
+                        <ImageView
+                            android:id="@+id/iconApp1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_netflix" />
+                    </FrameLayout>
+
+                    <!-- Card 2 -->
+                    <FrameLayout
+                        android:id="@+id/cardApp2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/cardApp1"
+                        android:nextFocusRight="@+id/cardApp3">
+                        <ImageView
+                            android:id="@+id/iconApp2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_youtube" />
+                    </FrameLayout>
+
+                    <!-- Card 3 -->
+                    <FrameLayout
+                        android:id="@+id/cardApp3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/cardApp2"
+                        android:nextFocusRight="@+id/cardSettings">
+                        <ImageView
+                            android:id="@+id/iconApp3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_launcher_foreground" />
+                    </FrameLayout>
+
+                    <!-- Card 4: Configurações - ÍCONE MAIOR (105dp) -->
+                    <FrameLayout
+                        android:id="@+id/cardSettings"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/cardApp3"
+                        android:nextFocusRight="@+id/cardStore">
+                        <ImageView
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_config" />
+                    </FrameLayout>
+
+                    <!-- Card 5: Loja de Apps - ÍCONE MAIOR (105dp) -->
+                    <FrameLayout
+                        android:id="@+id/cardStore"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_selector"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/cardSettings"
+                        android:nextFocusRight="@+id/cardStore">
+                        <ImageView
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_store" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- ================= TELA 2: TODOS OS APLICATIVOS (GRADE INFERIOR) ================= -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="1080dp"
+                android:paddingStart="48dp"
+                android:paddingEnd="48dp"
+                android:paddingTop="48dp"
+                android:focusable="false"
+                android:descendantFocusability="afterDescendants"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/titleApps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Todos os Aplicativos"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- GridView liberada para não cortar as bordas de foco (clipChildren = false) -->
+                <GridView
+                    android:id="@+id/appsGridView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="48dp"
+                    android:numColumns="5"
+                    android:horizontalSpacing="8dp"
+                    android:verticalSpacing="8dp"
+                    android:stretchMode="columnWidth"
+
+                    android:listSelector="@android:color/transparent"
+                    android:descendantFocusability="afterDescendants"
+
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleApps" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
