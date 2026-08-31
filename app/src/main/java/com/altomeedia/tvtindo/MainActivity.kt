@@ -17,6 +17,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -65,6 +66,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         settingsPreferences = SettingsPreferences(this)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (currentFocus?.parent == binding.appsGridView) {
+                    binding.mainScrollView.smoothScrollTo(0, 0)
+                    binding.cardApp1.requestFocus()
+                } else {
+                    isEnabled = false
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
+        })
 
         setupFocusAnimations()
         carregarConfiguracoesSalvas()
@@ -219,15 +232,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.dispatchKeyEvent(event)
-    }
-
-    override fun onBackPressed() {
-        if (currentFocus?.parent == binding.appsGridView) {
-            binding.mainScrollView.smoothScrollTo(0, 0)
-            binding.cardApp1.requestFocus()
-        } else {
-            super.onBackPressed()
-        }
     }
 
     private fun safeSetImageUri(imageView: ImageView, uri: Uri) {
