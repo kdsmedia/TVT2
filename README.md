@@ -1,34 +1,43 @@
-# 📺 UniTV Launcher - BETA1 para Android TV / TV Box
+# 📺 TVT Launcher - BETA1 untuk Android TV / TV Box
 
-Uma Launcher leve, rápida e totalmente focada em usabilidade para Android TV e TV Boxes. Desenvolvida para ser intuitiva pelo controle remoto, sem travamentos e com visual limpo.
+Launcher yang ringan, cepat, dan sepenuhnya fokus pada kenyamanan penggunaan untuk Android TV dan TV Box. Dikembangkan agar intuitif dengan remote control, tanpa lag, dan visual yang bersih.
 
-## ✨ Principais Funcionalidades
+## ✨ Fitur Utama
 
-- **Navegação 100% via D-Pad (Controle Remoto):** Nada de setas de mouse presas. O foco flui perfeitamente entre os aplicativos.
-- **Atalhos Customizáveis:** Segure o botão "OK" em qualquer um dos 3 cards principais para escolher qual aplicativo você quer fixar ali.
-- **Opções Avançadas de Apps:** Segure o botão "OK" nos aplicativos da grade inferior para abrir o menu de desinstalação rápida.
-- **Ouvinte de Sistema Inteligente:** A lista de aplicativos atualiza automaticamente em tempo real quando você instala ou apaga um app (sem precisar reiniciar a TV).
-- **Banner Customizável:** Clique no banner superior para trocar a imagem de fundo por qualquer uma da sua galeria.
-- **Proteção Anti-Crash:** Botões de Wi-Fi e Bluetooth inteligentes que se adaptam a diferentes marcas de TV Box sem fechar o app.
+- **Navigasi 100% via D-Pad (Remote Control):** Tanpa panah mouse yang tersangkut.Fokus mengalir dengan mulus di antara aplikasi.
 
-## 🖼️ Telas do Aplicativo
+
+
+- **Pintasan Kustom:** Tahan tombol "OK" pada salah satu dari 3 kartu utama untuk memilih aplikasi yang ingin Anda sematkan di sana!
+
+
+
+- **Opsi Aplikasi Lanjutan:** Tahan tombol "OK" pada aplikasi di grid bagian bawah untuk membuka menu penghapusan cepat,
+- **Pendengar Sistem Cerdas:** Daftar aplikasi diperbarui otomatis secara real-time saat Anda memasang atau menghapus aplikasi (tanpa perlu merestart TV).
+- **Banner Kustom:** Klik banner di bagian atas untuk mengganti gambar latar dengan salah satu dari galeri Anda,
+
+- **Proteksi Anti-Crash:** Tombol Wi-Fi dan Bluetooth yang cerdas, menyesuaikan diri dengan berbagai merek TV Box tanpa menutup aplikasi,
+
+## 🖼️ Tampilan Aplikasi
 <img width="1280" height="720" alt="Screenshot_20260806-135036" src="https://github.com/user-attachments/assets/536947d3-da68-4b6c-93cf-2c77841abeff" />
 <img width="1280" height="720" alt="Screenshot_20260806-135045" src="https://github.com/user-attachments/assets/70183053-437f-457e-acad-9d93ce12124e" />
 
-## 📥 Como Baixar e Instalar na sua TV Box
+## 📥 Cara Mengunduh dan Memasang di TV Box Anda
 
-Você não precisa entender de código para usar! Siga os passos:
+Anda tidak perlu memahami kode untuk menggunakannya! Ikuti langkah-langkah berikut:
 
-1. Vá na aba **[Releases](link_para_suas_releases)** aqui no lado direito da página.
-2. Baixe o arquivo `.apk` da versão mais recente (ex: `UniTV-Launcher-v1.0.apk`).
-3. Passe o arquivo para um **PenDrive** ou envie para a sua TV via Wi-Fi usando o app *Send Files to TV*.
-4. Na sua TV Box, abra um Gerenciador de Arquivos (File Manager), clique no `.apk` e clique em **Instalar**.
-5. Aperte o botão "Home" (Casinha) do seu controle e escolha a UniTV Launcher como padrão!
 
-## 🛠️ Tecnologias Utilizadas
+
+1. Buka tab **[Releases](https://github.com/kdsmedia/TVT2/releases)** di sisi kanan halaman ini,
+2. Unduh file `.apk` dari versi terbaru (contoh: `TVT-Launcher-v1.0.apk`),
+3. Pindahkan file ke **Flashdisk** atau kirim ke TV Anda via Wi-Fi menggunakan aplikasi *Send Files to TV*,
+4. Di TV Box Anda, buka **Pengelola File**(File Manager), klik `.apk`, lalu klik **Instal**,
+5. Tekan tombol "Home" (ikon rumah) di remote Anda, lalu pilih TVT Launcher sebagai launcher bawaan!
+
+## 🛠️ Teknologi yang Digunakan
 - **Kotlin**
-- **Android Studio / SDK de Android TV**
-- **ConstraintLayout & GridView (otimizados para D-Pad)**
+- **Android Studio / SDK Android TV**
+- **ConstraintLayout & GridView (dioptimalkan untuk D-Pad)**
 
-## 👨‍💻 Contribuições
-Em breve novas versões...
+## 👨‍💻 Kontribusi
+Segera hadir versi baru...
