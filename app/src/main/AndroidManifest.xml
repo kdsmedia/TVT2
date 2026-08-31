@@ -11,6 +11,9 @@
     <!-- Menandai bahwa ini aplikasi TV dan tidak memerlukan sentuhan -->
     <uses-feature android:name="android.software.leanback" android:required="true" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <!-- Aksesoris opsional: TV dengan Ethernet hanya, dan remote tanpa Bluetooth, tetap didukung-->
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
 
     <!-- Launcher perlu melihat semua aplikasi terpasang (package visibility, Android 11+) untuk menyusun grid -->
     <queries>
@@ -23,6 +26,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:isGame="false"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniTVLauncher"
