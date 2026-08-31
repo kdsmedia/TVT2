@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Estado quando o controle remoto está em cima do card -->
+    <!-- Keadaan saat remote berada di atas kartu -->
     <item android:state_focused="true" android:drawable="@drawable/bg_card_focused" />
 
-    <!-- Estado normal (sem foco) -->
+    <!-- Keadaan normal (tanpa fokus) -->
     <item android:drawable="@drawable/bg_card_normal" />
 </selector>

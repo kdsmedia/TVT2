@@ -39,10 +39,10 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // DataStore para preferências (Favoritos, Wallpapers)
+    // DataStore untuk preferensi (Favorit, Wallpaper)
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
-    // Lifecycle e MVVM
+    // Lifecycle dan MVVM
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 }

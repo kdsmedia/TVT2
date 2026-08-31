@@ -2,17 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permissões necessárias para TV e Launcher -->
+    <!-- Izin yang diperlukan untuk TV dan Launcher -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
-    <!-- Define que é um app para TV e não precisa de touch -->
+    <!-- Menandai bahwa ini aplikasi TV dan tidak memerlukan sentuhan -->
     <uses-feature android:name="android.software.leanback" android:required="true" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
-    <!-- Launcher precisa enxergar todos os apps instalados (package visibility, Android 11+) para montar a grade -->
+    <!-- Launcher perlu melihat semua aplikasi terpasang (package visibility, Android 11+) untuk menyusun grid -->
     <queries>
         <intent>
             <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
         android:theme="@style/Theme.UniTVLauncher"
         android:banner="@mipmap/ic_launcher">
 
-        <!-- MainActivity configurada como Launcher principal -->
+        <!-- MainActivity dikonfigurasi sebagai Launcher utama -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -37,7 +37,7 @@
             android:theme="@style/Theme.UniTVLauncher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!-- Estas categorias transformam o app em uma Launcher -->
+                <!-- Kategori ini menjadikan aplikasi sebagai Launcher -->
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />

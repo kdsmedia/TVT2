@@ -7,7 +7,7 @@
     android:clipChildren="false"
     android:clipToPadding="false">
 
-    <!-- Fundo Escuro para Contraste -->
+    <!-- Latar Gelap untuk Kontras -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +29,7 @@
             android:clipChildren="false"
             android:clipToPadding="false">
 
-            <!-- ================= TELA 1: HOME (TOPO) ================= -->
+            <!-- ================= LAYAR 1: HOME (ATAS) ================= -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="1080dp"
@@ -67,8 +67,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:format12Hour="EEEE\ndd 'de' MMMM 'de' yyyy"
-                    android:format24Hour="EEEE\ndd 'de' MMMM 'de' yyyy"
+                    android:format12Hour="EEEE,\ndd MMMM yyyy"
+                    android:format24Hour="EEEE,\ndd MMMM yyyy"
                     android:textColor="#B0BEC5"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="@+id/clockText"
@@ -147,7 +147,7 @@
                     </FrameLayout>
                 </LinearLayout>
 
-                <!-- Banner Customizável (Margem superior ajustada para compensar a logo) -->
+                <!-- Banner Kustom (margin atas disesuaikan untuk mengimbangi logo) -->
                 <FrameLayout
                     android:id="@+id/cardBanner"
                     android:layout_width="0dp"
@@ -169,7 +169,7 @@
                         android:src="@drawable/banner_padrao" />
                 </FrameLayout>
 
-                <!-- Centro: 5 Cards Principais -->
+                <!-- Tengah: 5 Kartu Utama -->
                 <LinearLayout
                     android:id="@+id/cardsContainer"
                     android:layout_width="0dp"
@@ -184,7 +184,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardBanner">
 
-                    <!-- Card 1 -->
+                    <!-- Kartu 1 -->
                     <FrameLayout
                         android:id="@+id/cardApp1"
                         android:layout_width="0dp"
@@ -204,7 +204,7 @@
                             android:src="@drawable/ic_netflix" />
                     </FrameLayout>
 
-                    <!-- Card 2 -->
+                    <!-- Kartu 2 -->
                     <FrameLayout
                         android:id="@+id/cardApp2"
                         android:layout_width="0dp"
@@ -224,7 +224,7 @@
                             android:src="@drawable/ic_youtube" />
                     </FrameLayout>
 
-                    <!-- Card 3 -->
+                    <!-- Kartu 3 -->
                     <FrameLayout
                         android:id="@+id/cardApp3"
                         android:layout_width="0dp"
@@ -244,7 +244,7 @@
                             android:src="@drawable/ic_launcher_foreground" />
                     </FrameLayout>
 
-                    <!-- Card 4: Configurações - ÍCONE MAIOR (105dp) -->
+                    <!-- Kartu 4: Pengaturan - IKON LEBIH BESAR (105dp) -->
                     <FrameLayout
                         android:id="@+id/cardSettings"
                         android:layout_width="0dp"
@@ -263,7 +263,7 @@
                             android:src="@drawable/ic_config" />
                     </FrameLayout>
 
-                    <!-- Card 5: Loja de Apps - ÍCONE MAIOR (105dp) -->
+                    <!-- Kartu 5: Toko Aplikasi - IKON LEBIH BESAR (105dp) -->
                     <FrameLayout
                         android:id="@+id/cardStore"
                         android:layout_width="0dp"
@@ -284,7 +284,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- ================= TELA 2: TODOS OS APLICATIVOS (GRADE INFERIOR) ================= -->
+            <!-- ================= LAYAR 2: SEMUA APLIKASI (GRID BAWAH) ================= -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="1080dp"
@@ -300,14 +300,14 @@
                     android:id="@+id/titleApps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todos os Aplicativos"
+                    android:text="Semua Aplikasi"
                     android:textColor="@android:color/white"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- GridView liberada para não cortar as bordas de foco (clipChildren = false) -->
+                <!-- GridView dibebaskan agar tidak memotong tepi fokus (clipChildren = false) -->
                 <GridView
                     android:id="@+id/appsGridView"
                     android:layout_width="0dp"

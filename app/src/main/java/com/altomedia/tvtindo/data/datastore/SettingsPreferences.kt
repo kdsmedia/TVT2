@@ -18,7 +18,7 @@ class SettingsPreferences(private val context: Context) {
         val SHORTCUT_SLOT_2 = stringPreferencesKey("shortcut_slot_2")
         val SHORTCUT_SLOT_3 = stringPreferencesKey("shortcut_slot_3")
         val WALLPAPER_URI = stringPreferencesKey("wallpaper_uri")
-        val BANNER_URIS = stringPreferencesKey("banner_uris") // URIs separadas por vírgula para o banner
+        val BANNER_URIS = stringPreferencesKey("banner_uris") // URI dipisah koma untuk banner
     }
 
     suspend fun saveShortcut(slot: Int, packageName: String) {

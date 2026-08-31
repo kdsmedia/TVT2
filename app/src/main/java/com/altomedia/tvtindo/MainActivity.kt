@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
     private var pkgSlot2 = "com.google.android.youtube.tv"
     private var pkgSlot3 = "com.unitv.player"
 
-    // 1. OUVINTE DO SISTEMA: Percebe quando você instala/desinstala apps
+    // 1. PENDENGAR SISTEM: Mendeteksi saat Anda memasang/menghapus aplikasi
     private val packageReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
-            // Atualiza a grade de aplicativos imediatamente
+            // Segera memperbarui daftar aplikasi
             carregarGradeDeApps()
         }
     }
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 lifecycleScope.launch {
                     settingsPreferences.saveBannerUris(uri.toString())
                     safeSetImageUri(binding.imgBanner, uri)
-                    Toast.makeText(this@MainActivity, "Banner atualizado!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Banner diperbarui!", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         configurarCliques()
         carregarGradeDeApps()
 
-        // Registrando o ouvinte para monitorar instalações e desinstalações
+        // Mendaftarkan pendengar untuk memantau pemasangan dan penghapusan
         val filter = IntentFilter().apply {
             addAction(Intent.ACTION_PACKAGE_ADDED)
             addAction(Intent.ACTION_PACKAGE_REMOVED)
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        // Limpa o ouvinte para economizar memória quando fechar o app
+        // Membersihkan pendengar untuk menghemat memori saat menutup aplikasi
         try {
             unregisterReceiver(packageReceiver)
         } catch (e: Exception) {
@@ -137,25 +137,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 2. FUNÇÃO SEGURA: Impede o crash caso a TV Box não tenha o atalho direto
+    // 2. FUNGSI AMAN: Mencegah crash bila TV Box tidak memiliki pintasan langsung
     private fun abrirConfiguracaoSegura(action: String, fallbackAction: String = Settings.ACTION_SETTINGS) {
         try {
             startActivity(Intent(action))
         } catch (e: Exception) {
             try {
-                // Se der erro, joga para as configurações gerais da TV
+                // Jika gagal, arahkan ke pengaturan umum TV
                 startActivity(Intent(fallbackAction))
             } catch (ex: Exception) {
-                Toast.makeText(this, "Menu de configurações não encontrado.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Menu pengaturan tidak ditemukan.", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun configurarCliques() {
-        // Agora os botões usam a função segura anti-crash
+        // Sekarang tombol-tombol memakai fungsi aman anti-crash
         binding.btnWifi.setOnClickListener { abrirConfiguracaoSegura(Settings.ACTION_WIFI_SETTINGS) }
         binding.btnBluetooth.setOnClickListener { abrirConfiguracaoSegura(Settings.ACTION_BLUETOOTH_SETTINGS) }
-        binding.btnCast.setOnClickListener { abrirConfiguracaoSegura(Settings.ACTION_DISPLAY_SETTINGS) } // Display Settings costuma englobar transmissão na TV Box
+        binding.btnCast.setOnClickListener { abrirConfiguracaoSegura(Settings.ACTION_DISPLAY_SETTINGS) } // Pengaturan Tampilan biasanya mencakup transmisi di TV Box
 
         binding.cardBanner.setOnClickListener {
             val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun mostrarSeletor(slot: Int) {
-        mostrarSeletorDeApps("Escolher App para o Card $slot") { novoPacote ->
+        mostrarSeletorDeApps("Pilih Aplikasi untuk Kartu $slot") { novoPacote ->
             lifecycleScope.launch { settingsPreferences.saveShortcut(slot, novoPacote) }
         }
     }
@@ -277,9 +277,9 @@ class MainActivity : AppCompatActivity() {
                 abrirApp(app.packageName)
             }
 
-            // 3. MENU DE OPÇÕES: Segurar botão OK para desinstalar
+            // 3. MENU OPSI: Tahan tombol OK untuk menghapus
             view.setOnLongClickListener {
-                val opcoes = arrayOf("Abrir aplicativo", "Desinstalar")
+                val opcoes = arrayOf("Buka aplikasi", "Hapus")
                 AlertDialog.Builder(this@MainActivity)
                     .setTitle(app.label)
                     .setItems(opcoes) { _, which ->
@@ -318,7 +318,7 @@ class MainActivity : AppCompatActivity() {
         if (intent != null) {
             startActivity(intent)
         } else {
-            Toast.makeText(this, "Aplicativo não instalado nesta TV.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Aplikasi tidak terpasang di TV ini.", Toast.LENGTH_SHORT).show()
         }
     }
 
