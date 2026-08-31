@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UniTV Launcher"
+rootProject.name = "TVT"
 include(":app")
