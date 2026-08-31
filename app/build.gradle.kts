@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.altomedia.tvtindo"
+    namespace = "com.altomeedia.tvtindo"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.altomedia.tvtindo"
+        applicationId = "com.altomeedia.tvtindo"
         minSdk = 21
         targetSdk = 37
         versionCode = 1

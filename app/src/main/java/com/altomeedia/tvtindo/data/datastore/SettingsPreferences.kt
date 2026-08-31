@@ -1,4 +1,4 @@
-package com.altomedia.tvtindo.data.datastore
+package com.altomeedia.tvtindo.data.datastore
 
 import android.content.Context
 import androidx.datastore.core.DataStore
