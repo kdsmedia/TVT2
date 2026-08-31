@@ -30,7 +30,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniTVLauncher"
-        android:banner="@mipmap/ic_launcher">
+        android:banner="@drawable/tv_banner">
 
         <!-- MainActivity dikonfigurasi sebagai Launcher utama -->
         <activity
