@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TVT</string>
+    <string name="content_desc_logo">Logo TVT</string>
+    <string name="content_desc_wifi">Ikon Wi-Fi</string>
+    <string name="content_desc_bluetooth">Ikon Bluetooth</string>
+    <string name="content_desc_cast">Ikon Chromecast</string>
+    <string name="content_desc_banner">Banner aplikasi TVT</string>
+    <string name="content_desc_netflix">Ikon Netflix</string>
+    <string name="content_desc_youtube">Ikon YouTube</string>
+    <string name="content_desc_tvt">Ikon TVT</string>
+    <string name="content_desc_settings">Ikon Pengaturan</string>
+    <string name="content_desc_store">Ikon Toko Aplikasi</string>
+    <string name="title_all_apps">Semua Aplikasi</string>
 </resources>

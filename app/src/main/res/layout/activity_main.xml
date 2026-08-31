@@ -23,6 +23,7 @@
         android:clipToPadding="false">
 
         <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -78,7 +79,7 @@
                 <!-- Logo UniTV MAIOR e MAIS PRÓXIMA DO TOPO (12dp de margem) -->
 
                 <!-- Ícones de Conexão -->
-                <ImageView android:contentDescription="Logo TVT"
+                <ImageView android:contentDescription="@string/content_desc_logo"
                     android:id="@+id/logoUniTV"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
@@ -108,7 +109,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView android:contentDescription="Ikon Wi-Fi"
+                        <ImageView android:contentDescription="@string/content_desc_wifi"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -123,7 +124,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView android:contentDescription="Ikon Bluetooth"
+                        <ImageView android:contentDescription="@string/content_desc_bluetooth"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -138,7 +139,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView android:contentDescription="Ikon Chromecast"
+                        <ImageView android:contentDescription="@string/content_desc_cast"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -161,7 +162,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/logoUniTV">
 
-                    <ImageView android:contentDescription="Banner aplikasi TVT"
+                    <ImageView android:contentDescription="@string/content_desc_banner"
                         android:id="@+id/imgBanner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -174,6 +175,7 @@
                     android:id="@+id/cardsContainer"
                     android:layout_width="0dp"
                     android:layout_height="125dp"
+                    android:baselineAligned="false"
                     android:layout_marginStart="48dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="48dp"
@@ -195,7 +197,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp1"
                         android:nextFocusRight="@+id/cardApp2">
-                        <ImageView android:contentDescription="Ikon Netflix"
+                        <ImageView android:contentDescription="@string/content_desc_netflix"
                             android:id="@+id/iconApp1"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -215,7 +217,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp1"
                         android:nextFocusRight="@+id/cardApp3">
-                        <ImageView android:contentDescription="Ikon YouTube"
+                        <ImageView android:contentDescription="@string/content_desc_youtube"
                             android:id="@+id/iconApp2"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -235,7 +237,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp2"
                         android:nextFocusRight="@+id/cardSettings">
-                        <ImageView android:contentDescription="Ikon TVT"
+                        <ImageView android:contentDescription="@string/content_desc_tvt"
                             android:id="@+id/iconApp3"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -255,7 +257,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp3"
                         android:nextFocusRight="@+id/cardStore">
-                        <ImageView android:contentDescription="Ikon Pengaturan"
+                        <ImageView android:contentDescription="@string/content_desc_settings"
                             android:layout_width="105dp"
                             android:layout_height="105dp"
                             android:layout_gravity="center"
@@ -273,7 +275,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardSettings"
                         android:nextFocusRight="@+id/cardStore">
-                        <ImageView android:contentDescription="Ikon Toko Aplikasi"
+                        <ImageView android:contentDescription="@string/content_desc_store"
                             android:layout_width="105dp"
                             android:layout_height="105dp"
                             android:layout_gravity="center"
@@ -300,7 +302,7 @@
                     android:id="@+id/titleApps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semua Aplikasi"
+                    android:text="@string/title_all_apps"
                     android:textColor="@android:color/white"
                     android:textSize="28sp"
                     android:textStyle="bold"
@@ -312,6 +314,7 @@
                     android:id="@+id/appsGridView"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    tools:ignore="NestedScrolling"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="48dp"
                     android:numColumns="5"
