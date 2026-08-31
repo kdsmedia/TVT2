@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.unitv.launcher"
+    namespace = "com.altomedia.tvtindo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.unitv.launcher"
+        applicationId = "com.altomedia.tvtindo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

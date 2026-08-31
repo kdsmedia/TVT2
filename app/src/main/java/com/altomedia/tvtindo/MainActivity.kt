@@ -1,4 +1,4 @@
-package com.unitv.launcher
+package com.altomedia.tvtindo
 
 import android.app.AlertDialog
 import android.content.BroadcastReceiver
@@ -20,8 +20,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.unitv.launcher.data.datastore.SettingsPreferences
-import com.unitv.launcher.databinding.ActivityMainBinding
+import com.altomedia.tvtindo.databinding.ActivityMainBinding
+import com.altomedia.tvtindo.data.datastore.SettingsPreferences
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

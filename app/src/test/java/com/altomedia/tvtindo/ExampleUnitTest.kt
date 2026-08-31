@@ -1,4 +1,4 @@
-package com.unitv.launcher
+package com.altomedia.tvtindo
 
 import org.junit.Test
 

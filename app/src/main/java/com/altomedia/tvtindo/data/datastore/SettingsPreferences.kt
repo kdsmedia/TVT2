@@ -1,4 +1,4 @@
-package com.unitv.launcher.data.datastore
+package com.altomedia.tvtindo.data.datastore
 
 import android.content.Context
 import androidx.datastore.core.DataStore
