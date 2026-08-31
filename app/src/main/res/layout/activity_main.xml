@@ -78,7 +78,7 @@
                 <!-- Logo UniTV MAIOR e MAIS PRÓXIMA DO TOPO (12dp de margem) -->
 
                 <!-- Ícones de Conexão -->
-                <ImageView
+                <ImageView android:contentDescription="Logo TVT"
                     android:id="@+id/logoUniTV"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
@@ -108,7 +108,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Wi-Fi"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -123,7 +123,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Bluetooth"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -138,7 +138,7 @@
                         android:layout_marginStart="12dp"
                         android:background="@drawable/bg_card_selector"
                         android:focusable="true">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Chromecast"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -161,7 +161,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/logoUniTV">
 
-                    <ImageView
+                    <ImageView android:contentDescription="Banner aplikasi TVT"
                         android:id="@+id/imgBanner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -195,7 +195,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp1"
                         android:nextFocusRight="@+id/cardApp2">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Netflix"
                             android:id="@+id/iconApp1"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -215,7 +215,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp1"
                         android:nextFocusRight="@+id/cardApp3">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon YouTube"
                             android:id="@+id/iconApp2"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -235,7 +235,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp2"
                         android:nextFocusRight="@+id/cardSettings">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon TVT"
                             android:id="@+id/iconApp3"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
@@ -255,7 +255,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardApp3"
                         android:nextFocusRight="@+id/cardStore">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Pengaturan"
                             android:layout_width="105dp"
                             android:layout_height="105dp"
                             android:layout_gravity="center"
@@ -273,7 +273,7 @@
                         android:focusable="true"
                         android:nextFocusLeft="@+id/cardSettings"
                         android:nextFocusRight="@+id/cardStore">
-                        <ImageView
+                        <ImageView android:contentDescription="Ikon Toko Aplikasi"
                             android:layout_width="105dp"
                             android:layout_height="105dp"
                             android:layout_gravity="center"
