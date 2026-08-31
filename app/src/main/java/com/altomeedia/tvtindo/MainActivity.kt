@@ -274,6 +274,7 @@ class MainActivity : AppCompatActivity() {
             val txtName = view.findViewById<TextView>(R.id.txtAppName)
 
             imgIcon.setImageDrawable(app.icon)
+            imgIcon.contentDescription = app.label
             txtName.text = app.label
 
             view.setupTVFocusAnimation()
