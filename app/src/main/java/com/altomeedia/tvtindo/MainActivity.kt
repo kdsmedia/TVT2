@@ -19,6 +19,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.altomeedia.tvtindo.databinding.ActivityMainBinding
 import com.altomeedia.tvtindo.data.datastore.SettingsPreferences
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             addAction(Intent.ACTION_PACKAGE_CHANGED)
             addDataScheme("package")
         }
-        registerReceiver(packageReceiver, filter)
+        ContextCompat.registerReceiver(this, packageReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
     }
 
     override fun onDestroy() {
