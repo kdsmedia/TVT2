@@ -1,4 +1,4 @@
-package com.altomeedia.tvtindo
+package com.altomedia.tvtindo
 
 import org.junit.Test
 

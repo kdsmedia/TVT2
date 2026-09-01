@@ -1,4 +1,4 @@
-package com.altomeedia.tvtindo
+package com.altomedia.tvtindo
 
 import android.app.AlertDialog
 import android.content.BroadcastReceiver
@@ -22,8 +22,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import com.altomeedia.tvtindo.databinding.ActivityMainBinding
-import com.altomeedia.tvtindo.data.datastore.SettingsPreferences
+import com.altomedia.tvtindo.databinding.ActivityMainBinding
+import com.altomedia.tvtindo.data.datastore.SettingsPreferences
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
